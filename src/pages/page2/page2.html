@@ -8,16 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <ion-input id="editText" value="Fulano" type="text" [(ngModel)]="nome" placeholder="Digite seu nome"></ion-input>
+  <button id="btnConfirmar">Confirmar</button>
+  <button id="btnCancelar">Cancelar</button>
 </ion-content>
