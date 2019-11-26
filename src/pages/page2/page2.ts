@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Page1 } from '../page1/page1';
 
 @IonicPage()
 @Component({
@@ -34,5 +35,14 @@ export class Page2 {
     this.navCtrl.push('Page2', {
       item: item
     });
+  }
+
+  voltar() {
+    console.log("Voltei");
+    this.navCtrl.push(Page1, {});
+  }
+
+  cancelar() {
+    this.navCtrl.push(Page1, {});
   }
 }
