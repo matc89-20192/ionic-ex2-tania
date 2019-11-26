@@ -9,14 +9,24 @@ import { FunctionCall } from '@angular/compiler';
   templateUrl: 'page1.html'
 })
 export class Page1 {
-  texto
+  texto = "Oi, Fulano!";
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    this.texto = navParams.get('usuario') ? navParams.get('usuario') : 'Oi Fulano'
+    // this.texto = navParams.get('usuario') ? navParams.get('usuario') : 'Oi Fulano'
+    var nome = navParams.get('usuario');
+    if(typeof(nome) !== "undefined") {
+      if(nome.length > 0) {
+        this.texto = "Oi, " + nome + "!";
+      } else {
+        this.texto = "Oi!";
+      }
+    }
   }
   
 
   outraPagina() {
-    this.navCtrl.push(Page2, {});
+    this.navCtrl.push(Page2, {
+      name:this.texto
+    });
   }
 
 }

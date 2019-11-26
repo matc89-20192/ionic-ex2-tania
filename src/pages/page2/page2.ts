@@ -15,6 +15,9 @@ export class Page2 {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    var txt = navParams.get('name');
+    var usuario = txt.substring(4,txt.length-1);
+    this.nome = usuario;
 
     // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
