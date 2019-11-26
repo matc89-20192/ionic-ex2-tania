@@ -5,10 +5,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
+import { Page2 } from '../pages/page2/page2';
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    Page2
   ],
   imports: [
     BrowserModule,
@@ -16,7 +18,8 @@ import { MyApp } from './app.component';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    Page2
   ],
   providers: [
     StatusBar,

@@ -10,5 +10,6 @@ import { Page2 } from './page2';
   imports: [
     IonicPageModule.forChild(Page2),
   ],
+  exports: [Page2]
 })
 export class Page2Module { }
