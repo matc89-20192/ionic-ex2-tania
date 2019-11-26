@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Page2 } from '../page2/page2'
+import { FunctionCall } from '@angular/compiler';
 
 @IonicPage()
 @Component({
@@ -8,9 +9,11 @@ import { Page2 } from '../page2/page2'
   templateUrl: 'page1.html'
 })
 export class Page1 {
+  texto
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    let nome = navParams.get('usuario');
+    this.texto = navParams.get('usuario') ? navParams.get('usuario') : 'Oi Fulano'
   }
+  
 
   outraPagina() {
     this.navCtrl.push(Page2, {});

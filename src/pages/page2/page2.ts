@@ -38,7 +38,7 @@ export class Page2 {
   }
 
   voltar() {
-    console.log("Voltei");
+    console.log(this.nome);
     this.navCtrl.push(Page1, {
       usuario: this.nome
     });
