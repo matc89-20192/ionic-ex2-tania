@@ -11,7 +11,7 @@ export class Page2 {
   selectedItem: any;
   icons: string[];
   items: Array<{ title: string, note: string, icon: string }>;
-
+  nome;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
@@ -39,7 +39,9 @@ export class Page2 {
 
   voltar() {
     console.log("Voltei");
-    this.navCtrl.push(Page1, {});
+    this.navCtrl.push(Page1, {
+      usuario: this.nome
+    });
   }
 
   cancelar() {
